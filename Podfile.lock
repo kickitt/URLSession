@@ -1,0 +1,30 @@
+PODS:
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - R.swift
+  - SDWebImage (~> 5.7)
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - R.swift
+    - R.swift.Library
+    - SDWebImage
+    - SnapKit
+
+SPEC CHECKSUMS:
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 44b45f3dc45aef22713987c7c583f307c3727a7b
+
+COCOAPODS: 1.9.1
