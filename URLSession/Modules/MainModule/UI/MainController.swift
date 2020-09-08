@@ -9,5 +9,11 @@
 import UIKit
 
 class MainController: BaseViewController {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Try to Fetch"
+        self.view = MainView()
+    }
+    
 }

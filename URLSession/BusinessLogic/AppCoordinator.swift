@@ -18,14 +18,9 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        
+        let controller = MainController()
+        let navController = NavigationController.init(rootViewController: controller)
+        window?.rootViewController = navController
     }
     
-    private func startMainFlow() {
-        
-    }
-    
-    private func startUserListFlow() {
-       
-    }
 }
