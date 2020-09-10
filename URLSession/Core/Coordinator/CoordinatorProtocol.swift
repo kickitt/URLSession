@@ -6,6 +6,9 @@
 //  Copyright © 2020 Roman Berezin. All rights reserved.
 //
 
+import UIKit
+
 protocol CoordinatorProtocol {
-  func start()
+    var window: UIWindow { get set }
+    func startFlow()
 }

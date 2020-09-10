@@ -10,6 +10,9 @@ import UIKit
 
 class MainView: UIView {
     
+    var onFetchPressed: (()->())?
+    var onPostPressed: (()->())?
+
     lazy var scrollView = makeScrollView()
     lazy var activityIndicator = makeActivityIndicator()
     lazy var fetchButton = makeFetchButton()
@@ -17,8 +20,9 @@ class MainView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .red
         updateLayout()
+        fetchButton.addTarget(self, action: #selector(fetchButtonPressed), for: .touchUpInside)
+        postButton.addTarget(self, action: #selector(postButtonPressed), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -30,5 +34,17 @@ class MainView: UIView {
         activityIndicator.updateConstraints()
         fetchButton.updateConstraints()
         postButton.updateConstraints()
+    }
+    
+    //MARK: - Button's Actions
+    
+    @objc func fetchButtonPressed() {
+        print("GET")
+        onFetchPressed?()
+    }
+    
+    @objc func postButtonPressed() {
+        print("POST")
+        onPostPressed?()
     }
 }

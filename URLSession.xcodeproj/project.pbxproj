@@ -15,7 +15,7 @@
 		30D36CB825075AFA0009ACCE /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CB725075AFA0009ACCE /* CoordinatorProtocol.swift */; };
 		30D36CBB250761570009ACCE /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CBA250761570009ACCE /* UserListController.swift */; };
 		30D36CBE250761A60009ACCE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CBD250761A60009ACCE /* BaseViewController.swift */; };
-		30D36CC0250761CD0009ACCE /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CBF250761CD0009ACCE /* NavController.swift */; };
+		30D36CC0250761CD0009ACCE /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CBF250761CD0009ACCE /* NavigationController.swift */; };
 		30D36CC7250763EE0009ACCE /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CC6250763EE0009ACCE /* MainController.swift */; };
 		30D36CCA25076DE70009ACCE /* UserListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CC925076DE70009ACCE /* UserListFlowCoordinator.swift */; };
 		30D36CCC25076DFB0009ACCE /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CCB25076DFB0009ACCE /* MainFlowCoordinator.swift */; };
@@ -37,6 +37,8 @@
 		30D36CFD250788FA0009ACCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CFC250788FA0009ACCE /* MainView.swift */; };
 		30D36CFF2507893B0009ACCE /* MainView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CFE2507893B0009ACCE /* MainView+Extension.swift */; };
 		30D36D012507C5620009ACCE /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D002507C5620009ACCE /* MainButton.swift */; };
+		30D36D052508CC150009ACCE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D042508CC150009ACCE /* Coordinator.swift */; };
+		30D36D08250A553A0009ACCE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D07250A553A0009ACCE /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +52,7 @@
 		30D36CB725075AFA0009ACCE /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		30D36CBA250761570009ACCE /* UserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
 		30D36CBD250761A60009ACCE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		30D36CBF250761CD0009ACCE /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		30D36CBF250761CD0009ACCE /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30D36CC6250763EE0009ACCE /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		30D36CC925076DE70009ACCE /* UserListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListFlowCoordinator.swift; sourceTree = "<group>"; };
 		30D36CCB25076DFB0009ACCE /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		30D36CFC250788FA0009ACCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		30D36CFE2507893B0009ACCE /* MainView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView+Extension.swift"; sourceTree = "<group>"; };
 		30D36D002507C5620009ACCE /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		30D36D042508CC150009ACCE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30D36D07250A553A0009ACCE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010UserCell.swift"; sourceTree = "<group>"; };
 		846633944246979C10646C39 /* Pods_URLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACC197943B4357B6318724 /* Pods-URLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession.debug.xcconfig"; path = "Target Support Files/Pods-URLSession/Pods-URLSession.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,9 +113,9 @@
 		30D36C9E250629F40009ACCE /* URLSession */ = {
 			isa = PBXGroup;
 			children = (
+				30D36D022507D5130009ACCE /* Core */,
 				30D36CB325062EB40009ACCE /* BusinessLogic */,
 				30D36CFB2507877D0009ACCE /* Modules */,
-				30D36CB9250760AA0009ACCE /* UI */,
 				30D36CD02507714E0009ACCE /* Extensions */,
 				30D36CCF250770E10009ACCE /* Tools */,
 				30D36CA8250629F90009ACCE /* Assets.xcassets */,
@@ -126,7 +130,6 @@
 			children = (
 				30D36C9F250629F40009ACCE /* AppDelegate.swift */,
 				30D36CB425062ED40009ACCE /* AppCoordinator.swift */,
-				30D36CB725075AFA0009ACCE /* CoordinatorProtocol.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -143,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				30D36CBD250761A60009ACCE /* BaseViewController.swift */,
-				30D36CBF250761CD0009ACCE /* NavController.swift */,
+				30D36CBF250761CD0009ACCE /* NavigationController.swift */,
 			);
 			path = BaseUI;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 		30D36CC5250763B90009ACCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30D36D06250A54900009ACCE /* Cells */,
 				30D36CF12507823F0009ACCE /* UserListView.swift */,
 				30D36CF3250782560009ACCE /* UserListView+Extension.swift */,
 			);
@@ -272,8 +276,8 @@
 		30D36CF0250781DB0009ACCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				30D36CC5250763B90009ACCE /* View */,
 				30D36CBA250761570009ACCE /* UserListController.swift */,
+				30D36CC5250763B90009ACCE /* View */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -333,6 +337,32 @@
 				30D36CEC25077F950009ACCE /* PostTestModule */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		30D36D022507D5130009ACCE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				30D36D032508CC060009ACCE /* Coordinator */,
+				30D36CB9250760AA0009ACCE /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		30D36D032508CC060009ACCE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30D36D042508CC150009ACCE /* Coordinator.swift */,
+				30D36CB725075AFA0009ACCE /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30D36D06250A54900009ACCE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30D36D07250A553A0009ACCE /* UserCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8CC1E492795DCE2469AC02C1 /* Frameworks */ = {
@@ -505,10 +535,12 @@
 				30D36CF4250782560009ACCE /* UserListView+Extension.swift in Sources */,
 				30D36CE4250778D80009ACCE /* MainViewModel.swift in Sources */,
 				30D36CE8250778F30009ACCE /* PostTestViewModel.swift in Sources */,
-				30D36CC0250761CD0009ACCE /* NavController.swift in Sources */,
+				30D36CC0250761CD0009ACCE /* NavigationController.swift in Sources */,
+				30D36D052508CC150009ACCE /* Coordinator.swift in Sources */,
 				30D36CE0250777BD0009ACCE /* Company.swift in Sources */,
 				30D36CF22507823F0009ACCE /* UserListView.swift in Sources */,
 				30D36CCE25076E2F0009ACCE /* PostFlowCoordinator.swift in Sources */,
+				30D36D08250A553A0009ACCE /* UserCell.swift in Sources */,
 				30D36CCA25076DE70009ACCE /* UserListFlowCoordinator.swift in Sources */,
 				30D36CE2250777C50009ACCE /* Post.swift in Sources */,
 				30D36CD52507734F0009ACCE /* R.generated.swift in Sources */,

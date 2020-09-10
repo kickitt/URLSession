@@ -13,5 +13,5 @@ struct Address: Decodable {
     let suite: String
     let city: String
     let zipcode: String
-    let geo: Geo
+    let geo: Geo?
 }

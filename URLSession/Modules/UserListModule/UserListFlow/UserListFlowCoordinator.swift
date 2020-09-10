@@ -9,6 +9,25 @@
 import UIKit
 import Rswift
 
-class AuthFlowCoordinator: AppCoordinator {
+class UserListFlowCoordinator: Coordinator {
+ 
+    var onSuccessFlow: ((UserListFlowCoordinator?)->())?
+    var onFailureFlow: ((UserListFlowCoordinator?)->())?
+    private let rootViewController = NavigationController()
+    
+    override init(window: UIWindow) {
+        super.init(window: window)
+        self.window = window
+    }
+    
+    override func startFlow() {
+        self.startUserListFlow()
+    }
+    
+    private func startUserListFlow() {
+        let controller = UserListController(viewModel: UserListViewModel())
+        let navController = NavigationController.init(rootViewController: controller)
+        window.rootViewController = navController
+    }
     
 }

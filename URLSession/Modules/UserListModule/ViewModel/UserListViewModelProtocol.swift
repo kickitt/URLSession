@@ -9,7 +9,5 @@
 import Foundation
 
 protocol UserListViewModelProtocol {
-    var updateViewData: ((ViewData)->())? { get set }
-    func startFetch()
-    
+    func startFetch() -> [User]
 }

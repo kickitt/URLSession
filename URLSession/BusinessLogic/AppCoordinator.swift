@@ -9,18 +9,25 @@
 import UIKit
 import Rswift
 
-class AppCoordinator: CoordinatorProtocol {
+class AppCoordinator: Coordinator {
     
-    let window: UIWindow?
-    
-    init(window: UIWindow?) {
+    override init(window: UIWindow) {
+        super.init(window: window)
         self.window = window
     }
     
-    func start() {
-        let controller = MainController()
-        let navController = NavigationController.init(rootViewController: controller)
-        window?.rootViewController = navController
+    override func startFlow() {
+        startMainFlow()
+    }
+    
+    private func startMainFlow() {
+        let mainFlowCoordinator = MainFlowCoordinator(window: window)
+        mainFlowCoordinator.onSuccessFlow = { [weak self] coordinator in
+            self?.removeChildrenCoordinator(coordinator: mainFlowCoordinator)
+            self?.startFlow()
+        }
+        self.addChildrenCoordinator(coordinator: mainFlowCoordinator)
+        mainFlowCoordinator.startFlow()
     }
     
 }

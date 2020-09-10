@@ -6,4 +6,8 @@
 //  Copyright © 2020 Roman Berezin. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UserListView {
+    
+}
