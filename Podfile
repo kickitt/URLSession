@@ -9,5 +9,6 @@ target 'URLSession' do
 	pod 'R.swift'
   	pod 'SDWebImage', '~> 5.7'
   	pod 'SnapKit', '~> 5.0.0'
+    pod 'MBProgressHUD'
 
 end

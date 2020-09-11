@@ -17,7 +17,6 @@ class UserListController: BaseViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.title = "Users"
-        
     }
     
     required init?(coder: NSCoder) {
@@ -27,47 +26,38 @@ class UserListController: BaseViewController {
     override func loadView() {
         super.loadView()
         self.view = tableView
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableView.refreshControl?.addTarget(self, action: #selector(updateView), for: UIControl.Event.valueChanged)
+        bindingModel()
+        tableView.tableView.refreshControl?.addTarget(self, action: #selector(update), for: UIControl.Event.valueChanged)
         update()
     }
     
-    
-    @objc func update() {
-        viewModel.startFetch()
-        updateView()
-    }
-    
-  @objc private func updateView() {
-        tableView.tableView.refreshControl?.beginRefreshing()
-        viewModel.onFetching = { [weak self] in
+    private func bindingModel() {
+        viewModel.onFetching = {
             //loading process
-            
-            self?.tableView.dataSource = []
+//            ProgressHUD.show()
         }
         
         viewModel.onFetchingComplition = { [weak self] users, error in
             //stop loading process
+            self?.tableView.tableView.refreshControl?.endRefreshing()
             
             if let users = users {
+//                ProgressHUD.dismiss()
                 self?.tableView.dataSource = users
             }
-            
             if let error = error {
-                self?.tableView.dataSource = []
-                print(error)
+//                ProgressHUD.showError(error, interaction: false)
             }
         }
-    
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-             self.tableView.tableView.refreshControl?.endRefreshing()
-        }
-        
     }
     
-    
+    @objc func update() {
+        if !viewModel.isFetching {
+            viewModel.startFetch()
+        }
+    }
 }

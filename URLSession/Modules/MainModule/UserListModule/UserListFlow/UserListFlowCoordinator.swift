@@ -13,6 +13,7 @@ class UserListFlowCoordinator: Coordinator {
  
     var onSuccessFlow: ((UserListFlowCoordinator?)->())?
     var onFailureFlow: ((UserListFlowCoordinator?)->())?
+    
     private let rootViewController = NavigationController()
     
     override init(window: UIWindow) {
@@ -25,7 +26,8 @@ class UserListFlowCoordinator: Coordinator {
     }
     
     private func startUserListFlow() {
-        let controller = UserListController(viewModel: UserListViewModel())
+        let viewModel = UserListViewModel()
+        let controller = UserListController(viewModel: viewModel)
         let navController = NavigationController.init(rootViewController: controller)
         window.rootViewController = navController
     }

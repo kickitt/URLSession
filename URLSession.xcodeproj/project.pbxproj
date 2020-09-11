@@ -39,6 +39,12 @@
 		30D36D012507C5620009ACCE /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D002507C5620009ACCE /* MainButton.swift */; };
 		30D36D052508CC150009ACCE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D042508CC150009ACCE /* Coordinator.swift */; };
 		30D36D08250A553A0009ACCE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D07250A553A0009ACCE /* UserCell.swift */; };
+		E7A0E6F0250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0E6EF250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift */; };
+		E7A0E6F5250BDFA3006AA234 /* CheckInternet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A0E6F4250BDFA3006AA234 /* CheckInternet.storyboard */; };
+		E7A0E6F7250BDFD4006AA234 /* CheckInternetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0E6F6250BDFD4006AA234 /* CheckInternetVC.swift */; };
+		E7A0E6F9250BDFE7006AA234 /* CheckInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0E6F8250BDFE7006AA234 /* CheckInternetView.swift */; };
+		E7A0E6FB250BE024006AA234 /* CheckInternetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0E6FA250BE024006AA234 /* CheckInternetViewModel.swift */; };
+		E7A0E6FD250BE02E006AA234 /* CheckInternetViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A0E6FC250BE02E006AA234 /* CheckInternetViewModelAbstract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +84,12 @@
 		30D36D07250A553A0009ACCE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010UserCell.swift"; sourceTree = "<group>"; };
 		846633944246979C10646C39 /* Pods_URLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACC197943B4357B6318724 /* Pods-URLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession.debug.xcconfig"; path = "Target Support Files/Pods-URLSession/Pods-URLSession.debug.xcconfig"; sourceTree = "<group>"; };
+		E7A0E6EF250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetFlowCoordinator.swift; sourceTree = "<group>"; };
+		E7A0E6F4250BDFA3006AA234 /* CheckInternet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckInternet.storyboard; sourceTree = "<group>"; };
+		E7A0E6F6250BDFD4006AA234 /* CheckInternetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetVC.swift; sourceTree = "<group>"; };
+		E7A0E6F8250BDFE7006AA234 /* CheckInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetView.swift; sourceTree = "<group>"; };
+		E7A0E6FA250BE024006AA234 /* CheckInternetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetViewModel.swift; sourceTree = "<group>"; };
+		E7A0E6FC250BE02E006AA234 /* CheckInternetViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetViewModelAbstract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +246,8 @@
 		30D36CEA250779AC0009ACCE /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				30D36CEB250779B60009ACCE /* UserListModule */,
+				30D36CEC25077F950009ACCE /* PostTestModule */,
 				30D36CC1250761D90009ACCE /* MainFlow */,
 				30D36CF62507865E0009ACCE /* Models */,
 				30D36CF72507867C0009ACCE /* ViewModel */,
@@ -332,9 +346,8 @@
 		30D36CFB2507877D0009ACCE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7A0E6EE250BDEC0006AA234 /* CheckInternetModule */,
 				30D36CEA250779AC0009ACCE /* MainModule */,
-				30D36CEB250779B60009ACCE /* UserListModule */,
-				30D36CEC25077F950009ACCE /* PostTestModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -380,6 +393,35 @@
 				21CCEAB3E51C609BA4D6B784 /* Pods-URLSession.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7A0E6EE250BDEC0006AA234 /* CheckInternetModule */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0E6EF250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift */,
+				E7A0E6F3250BDF85006AA234 /* ViewModel */,
+				E7A0E6F1250BDF7A006AA234 /* View */,
+			);
+			path = CheckInternetModule;
+			sourceTree = "<group>";
+		};
+		E7A0E6F1250BDF7A006AA234 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0E6F8250BDFE7006AA234 /* CheckInternetView.swift */,
+				E7A0E6F6250BDFD4006AA234 /* CheckInternetVC.swift */,
+				E7A0E6F4250BDFA3006AA234 /* CheckInternet.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7A0E6F3250BDF85006AA234 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7A0E6FC250BE02E006AA234 /* CheckInternetViewModelAbstract.swift */,
+				E7A0E6FA250BE024006AA234 /* CheckInternetViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D36CAC250629F90009ACCE /* LaunchScreen.storyboard in Resources */,
+				E7A0E6F5250BDFA3006AA234 /* CheckInternet.storyboard in Resources */,
 				30D36CA9250629F90009ACCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,12 +561,14 @@
 			files = (
 				30D36CD8250777950009ACCE /* ViewData.swift in Sources */,
 				30D36CEF250781540009ACCE /* UserListViewModelProtocol.swift in Sources */,
+				E7A0E6F7250BDFD4006AA234 /* CheckInternetVC.swift in Sources */,
 				30D36CBE250761A60009ACCE /* BaseViewController.swift in Sources */,
 				30D36CD22507718C0009ACCE /* NSObject.swift in Sources */,
 				30D36CC7250763EE0009ACCE /* MainController.swift in Sources */,
 				30D36CB525062ED40009ACCE /* AppCoordinator.swift in Sources */,
 				30D36CBB250761570009ACCE /* UserListController.swift in Sources */,
 				30D36CDA2507779F0009ACCE /* User.swift in Sources */,
+				E7A0E6FB250BE024006AA234 /* CheckInternetViewModel.swift in Sources */,
 				30D36CA0250629F40009ACCE /* AppDelegate.swift in Sources */,
 				30D36CCC25076DFB0009ACCE /* MainFlowCoordinator.swift in Sources */,
 				30D36CDC250777AB0009ACCE /* Address.swift in Sources */,
@@ -535,9 +580,12 @@
 				30D36CF4250782560009ACCE /* UserListView+Extension.swift in Sources */,
 				30D36CE4250778D80009ACCE /* MainViewModel.swift in Sources */,
 				30D36CE8250778F30009ACCE /* PostTestViewModel.swift in Sources */,
+				E7A0E6F9250BDFE7006AA234 /* CheckInternetView.swift in Sources */,
 				30D36CC0250761CD0009ACCE /* NavigationController.swift in Sources */,
+				E7A0E6F0250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift in Sources */,
 				30D36D052508CC150009ACCE /* Coordinator.swift in Sources */,
 				30D36CE0250777BD0009ACCE /* Company.swift in Sources */,
+				E7A0E6FD250BE02E006AA234 /* CheckInternetViewModelAbstract.swift in Sources */,
 				30D36CF22507823F0009ACCE /* UserListView.swift in Sources */,
 				30D36CCE25076E2F0009ACCE /* PostFlowCoordinator.swift in Sources */,
 				30D36D08250A553A0009ACCE /* UserCell.swift in Sources */,

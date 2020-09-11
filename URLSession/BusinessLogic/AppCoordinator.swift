@@ -12,7 +12,17 @@ import Rswift
 class AppCoordinator: Coordinator {
     
     override func startFlow() {
-        startMainFlow()
+        startCheckInternetFlow()
+    }
+    
+    private func startCheckInternetFlow() {
+        let checkInternetCoordinator = CheckInternetFlowCoordinator(window: window)
+        checkInternetCoordinator.onSuccessFlow = { [weak self] coordinator in
+            self?.removeChildrenCoordinator(coordinator: coordinator)
+            self?.startMainFlow()
+        }
+        addChildrenCoordinator(coordinator: checkInternetCoordinator)
+        checkInternetCoordinator.startFlow()
     }
     
     private func startMainFlow() {
