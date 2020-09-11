@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol UserListViewModelProtocol {
-    func startFetch() -> [User]
+    var onFetching: (()->())? { get set }
+    var onFetchingComplition: (([User]?, String? )->())? { get set }
+    func startFetch()
+//    func startFetch(completion: @escaping ([User]?, String?) -> Void)
 }

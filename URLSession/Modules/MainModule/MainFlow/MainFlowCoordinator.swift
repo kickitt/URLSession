@@ -13,11 +13,6 @@ class MainFlowCoordinator: Coordinator {
     var onSuccessFlow: ((MainFlowCoordinator?) -> ())?
     private let rootViewController = NavigationController()
     
-    override init(window: UIWindow) {
-        super.init(window: window)
-        self.window = window
-    }
-    
     override func startFlow() {
         startMainFlow()
     }
@@ -35,7 +30,7 @@ class MainFlowCoordinator: Coordinator {
         let userListFlowCoordinator = UserListFlowCoordinator(window: window)
         userListFlowCoordinator.onSuccessFlow = { [weak self] coordinator in
             self?.removeChildrenCoordinator(coordinator: coordinator)
-            self?.startFlow()
+                //self?.startFlow()
         }
         self.addChildrenCoordinator(coordinator: userListFlowCoordinator)
         userListFlowCoordinator.startFlow()

@@ -7,16 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
-final class UserListViewModel: UserListViewModelProtocol {
-   
+class UserListViewModel: UserListViewModelProtocol {
+    
+    var onFetching: (() -> ())?
+    var onFetchingComplition: (([User]?, String?) -> ())?
+    
     let baseUrlString = "http://jsonplaceholder.typicode.com"
     
-    func startFetch() -> [User] {
+    func startFetch() {
         //start loading
-        var usersArray: [User] = []
         let path = "users"
-        guard let urll = URL(string: "\(baseUrlString)/\(path)") else { return []}
+        guard let urll = URL(string: "\(baseUrlString)/\(path)") else { return }
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfiguration)
         let dataTask = session.dataTask(with: urll) { (data, response, error) in
@@ -25,31 +28,26 @@ final class UserListViewModel: UserListViewModelProtocol {
             } else if let data = data {
                 do {
                     let users = try JSONDecoder().decode([User].self, from: data)
-                    usersArray = users
-                    print(usersArray)
-                    
+                    //Обновить DataSource таблицы
                     DispatchQueue.main.async {
-                        // обновить dataSourсe у таблицы
-                        // сделать reloadData у таблицы
-                        
+                        self.onFetchingComplition?(users, nil)
                     }
-                    
+
                 } catch {
                     print(error)
-                    
+
                     DispatchQueue.main.async {
                         // выводи алерт с ошибкой в главном потоке
-                      //  error.localizedDescription
+                        self.onFetchingComplition?(nil, error.localizedDescription)
                     }
                 }
             } else {
                 DispatchQueue.main.async {
                     // выводи алерт с дефольтной ошибкой "типа что то пошло не так" в главном потоке
+
                 }
             }
         }
         dataTask.resume()
-        
-        return usersArray
     }
 }

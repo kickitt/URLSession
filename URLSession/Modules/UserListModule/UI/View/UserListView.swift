@@ -11,7 +11,12 @@ import UIKit
 class UserListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     let tableView = UITableView()
-    var dataSource: [User] = []
+    
+    var dataSource: [User] = [] {
+        didSet {
+           tableView.reloadData()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

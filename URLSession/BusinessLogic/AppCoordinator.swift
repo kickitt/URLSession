@@ -11,11 +11,6 @@ import Rswift
 
 class AppCoordinator: Coordinator {
     
-    override init(window: UIWindow) {
-        super.init(window: window)
-        self.window = window
-    }
-    
     override func startFlow() {
         startMainFlow()
     }

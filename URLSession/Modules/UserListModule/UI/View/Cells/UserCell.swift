@@ -14,7 +14,6 @@ class UserCell: UITableViewCell {
     let userCityLabel = UILabel()
     var model: User? {
         didSet {
-            
             userNameLabel.text = model?.name ?? "None"
             userCityLabel.text = model?.address.city ?? "None"
         }
@@ -49,7 +48,5 @@ class UserCell: UITableViewCell {
             maker.right.lessThanOrEqualToSuperview().offset(10).labeled("NAME LABEL RIGHT")
             maker.bottom.lessThanOrEqualToSuperview().inset(10).labeled("COMMENT LABEL BOTTOM")
         }
-        
     }
-
 }

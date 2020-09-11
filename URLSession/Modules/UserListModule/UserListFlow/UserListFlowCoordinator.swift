@@ -29,5 +29,4 @@ class UserListFlowCoordinator: Coordinator {
         let navController = NavigationController.init(rootViewController: controller)
         window.rootViewController = navController
     }
-    
 }
