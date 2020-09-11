@@ -32,6 +32,7 @@ class UserCell: UITableViewCell {
         
         userNameLabel.numberOfLines = 0
         userCityLabel.numberOfLines = 0
+        userCityLabel.font = UIFont.systemFont(ofSize: 14)
         
         self.addSubview(userNameLabel)
         self.addSubview(userCityLabel)

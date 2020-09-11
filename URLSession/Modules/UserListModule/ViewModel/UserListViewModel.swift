@@ -23,6 +23,7 @@ class UserListViewModel: UserListViewModelProtocol {
         let sessionConfiguration = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfiguration)
         let dataTask = session.dataTask(with: urll) { (data, response, error) in
+            
             if let error = error {
                 print("error \(error)")
             } else if let data = data {

@@ -27,6 +27,9 @@ class UserListView: UIView, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UserCell.self, forCellReuseIdentifier: "UserCell")
+        
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
     }
     
     required init?(coder: NSCoder) {
@@ -48,5 +51,10 @@ class UserListView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     //MARK: - TableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
 }

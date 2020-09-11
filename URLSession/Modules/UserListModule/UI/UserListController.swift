@@ -32,14 +32,21 @@ class UserListController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableView.refreshControl?.addTarget(self, action: #selector(updateView), for: UIControl.Event.valueChanged)
+        update()
+    }
+    
+    
+    @objc func update() {
         viewModel.startFetch()
         updateView()
     }
     
-    
-    private func updateView() {
+  @objc private func updateView() {
+        tableView.tableView.refreshControl?.beginRefreshing()
         viewModel.onFetching = { [weak self] in
             //loading process
+            
             self?.tableView.dataSource = []
         }
         
@@ -55,5 +62,12 @@ class UserListController: BaseViewController {
                 print(error)
             }
         }
+    
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+             self.tableView.tableView.refreshControl?.endRefreshing()
+        }
+        
     }
+    
+    
 }
