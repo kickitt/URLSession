@@ -1,14 +1,16 @@
 //
-//  ViewModel.swift
+//  File.swift
 //  URLSession
 //
-//  Created by Roman Berezin on 08.09.2020.
+//  Created by Roman Berezin on 17.09.2020.
 //  Copyright © 2020 Roman Berezin. All rights reserved.
 //
 
+import Foundation
+
 import UIKit
 
-class UserListViewModel: UserListViewModelProtocol {
+class UserPostsViewModel: UserListViewModelProtocol {
     
     var isFetching: Bool = false
     
@@ -22,9 +24,9 @@ class UserListViewModel: UserListViewModelProtocol {
         isFetching = true
         onFetching?()
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             
-            let path = "users"
+            let path = "posts"
             guard let url = URL(string: "\(self.baseUrlString)/\(path)") else {
                 self.isFetching = false
                 self.onFetchingComplition?(nil, "Что то пошло не так!!!")

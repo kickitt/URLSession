@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		11C4C6D9428608162562E02B /* Pods_URLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846633944246979C10646C39 /* Pods_URLSession.framework */; };
+		3029252C25135EE9002D07EB /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029252B25135EE9002D07EB /* PostModel.swift */; };
+		3029253025135FBE002D07EB /* UserPostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029252F25135FBE002D07EB /* UserPostsController.swift */; };
+		30292534251367C2002D07EB /* UserPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30292533251367C2002D07EB /* UserPostsView.swift */; };
+		30292536251367F0002D07EB /* UserPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30292535251367F0002D07EB /* UserPostsCell.swift */; };
+		3029253825136C74002D07EB /* UserPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3029253725136C74002D07EB /* UserPostsViewModel.swift */; };
 		30D36CA0250629F40009ACCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36C9F250629F40009ACCE /* AppDelegate.swift */; };
 		30D36CA9250629F90009ACCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D36CA8250629F90009ACCE /* Assets.xcassets */; };
 		30D36CAC250629F90009ACCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D36CAA250629F90009ACCE /* LaunchScreen.storyboard */; };
@@ -22,7 +27,6 @@
 		30D36CCE25076E2F0009ACCE /* PostFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CCD25076E2F0009ACCE /* PostFlowCoordinator.swift */; };
 		30D36CD22507718C0009ACCE /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CD12507718C0009ACCE /* NSObject.swift */; };
 		30D36CD52507734F0009ACCE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CD42507734F0009ACCE /* R.generated.swift */; };
-		30D36CD8250777950009ACCE /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CD7250777950009ACCE /* ViewData.swift */; };
 		30D36CDA2507779F0009ACCE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CD92507779F0009ACCE /* User.swift */; };
 		30D36CDC250777AB0009ACCE /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CDB250777AB0009ACCE /* Address.swift */; };
 		30D36CDE250777B50009ACCE /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CDD250777B50009ACCE /* Geo.swift */; };
@@ -33,7 +37,6 @@
 		30D36CE8250778F30009ACCE /* PostTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CE7250778F30009ACCE /* PostTestViewModel.swift */; };
 		30D36CEF250781540009ACCE /* UserListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CEE250781540009ACCE /* UserListViewModelProtocol.swift */; };
 		30D36CF22507823F0009ACCE /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CF12507823F0009ACCE /* UserListView.swift */; };
-		30D36CF4250782560009ACCE /* UserListView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CF3250782560009ACCE /* UserListView+Extension.swift */; };
 		30D36CFD250788FA0009ACCE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CFC250788FA0009ACCE /* MainView.swift */; };
 		30D36CFF2507893B0009ACCE /* MainView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36CFE2507893B0009ACCE /* MainView+Extension.swift */; };
 		30D36D012507C5620009ACCE /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D36D002507C5620009ACCE /* MainButton.swift */; };
@@ -49,6 +52,11 @@
 
 /* Begin PBXFileReference section */
 		21CCEAB3E51C609BA4D6B784 /* Pods-URLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession.release.xcconfig"; path = "Target Support Files/Pods-URLSession/Pods-URLSession.release.xcconfig"; sourceTree = "<group>"; };
+		3029252B25135EE9002D07EB /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		3029252F25135FBE002D07EB /* UserPostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsController.swift; sourceTree = "<group>"; };
+		30292533251367C2002D07EB /* UserPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsView.swift; sourceTree = "<group>"; };
+		30292535251367F0002D07EB /* UserPostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsCell.swift; sourceTree = "<group>"; };
+		3029253725136C74002D07EB /* UserPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewModel.swift; sourceTree = "<group>"; };
 		30D36C9C250629F40009ACCE /* URLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D36C9F250629F40009ACCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30D36CA8250629F90009ACCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +73,6 @@
 		30D36CCD25076E2F0009ACCE /* PostFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFlowCoordinator.swift; sourceTree = "<group>"; };
 		30D36CD12507718C0009ACCE /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		30D36CD42507734F0009ACCE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		30D36CD7250777950009ACCE /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		30D36CD92507779F0009ACCE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		30D36CDB250777AB0009ACCE /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		30D36CDD250777B50009ACCE /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
@@ -76,7 +83,6 @@
 		30D36CE7250778F30009ACCE /* PostTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTestViewModel.swift; sourceTree = "<group>"; };
 		30D36CEE250781540009ACCE /* UserListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelProtocol.swift; sourceTree = "<group>"; };
 		30D36CF12507823F0009ACCE /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
-		30D36CF3250782560009ACCE /* UserListView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListView+Extension.swift"; sourceTree = "<group>"; };
 		30D36CFC250788FA0009ACCE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		30D36CFE2507893B0009ACCE /* MainView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainView+Extension.swift"; sourceTree = "<group>"; };
 		30D36D002507C5620009ACCE /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
@@ -104,6 +110,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3029252925135EA6002D07EB /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				30D36CD92507779F0009ACCE /* User.swift */,
+				30D36CDB250777AB0009ACCE /* Address.swift */,
+				30D36CDD250777B50009ACCE /* Geo.swift */,
+				30D36CDF250777BD0009ACCE /* Company.swift */,
+				30D36CE1250777C50009ACCE /* Post.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		3029252A25135EC2002D07EB /* User'sPosts */ = {
+			isa = PBXGroup;
+			children = (
+				3029252B25135EE9002D07EB /* PostModel.swift */,
+			);
+			path = "User'sPosts";
+			sourceTree = "<group>";
+		};
+		3029252D25135F79002D07EB /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				30D36CBA250761570009ACCE /* UserListController.swift */,
+				30D36CC5250763B90009ACCE /* View */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		3029252E25135F8D002D07EB /* User'sPosts */ = {
+			isa = PBXGroup;
+			children = (
+				3029252F25135FBE002D07EB /* UserPostsController.swift */,
+				3029253125135FCF002D07EB /* View */,
+			);
+			path = "User'sPosts";
+			sourceTree = "<group>";
+		};
+		3029253125135FCF002D07EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3029253225135FD4002D07EB /* Cells */,
+				30292533251367C2002D07EB /* UserPostsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3029253225135FD4002D07EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30292535251367F0002D07EB /* UserPostsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		30D36C93250629F40009ACCE = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +253,6 @@
 			children = (
 				30D36D06250A54900009ACCE /* Cells */,
 				30D36CF12507823F0009ACCE /* UserListView.swift */,
-				30D36CF3250782560009ACCE /* UserListView+Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,12 +286,8 @@
 		30D36CD6250776460009ACCE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				30D36CD7250777950009ACCE /* ViewData.swift */,
-				30D36CD92507779F0009ACCE /* User.swift */,
-				30D36CDB250777AB0009ACCE /* Address.swift */,
-				30D36CDD250777B50009ACCE /* Geo.swift */,
-				30D36CDF250777BD0009ACCE /* Company.swift */,
-				30D36CE1250777C50009ACCE /* Post.swift */,
+				3029252925135EA6002D07EB /* UserList */,
+				3029252A25135EC2002D07EB /* User'sPosts */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,12 +302,12 @@
 		30D36CEA250779AC0009ACCE /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				30D36CEB250779B60009ACCE /* UserListModule */,
-				30D36CEC25077F950009ACCE /* PostTestModule */,
 				30D36CC1250761D90009ACCE /* MainFlow */,
 				30D36CF62507865E0009ACCE /* Models */,
 				30D36CF72507867C0009ACCE /* ViewModel */,
 				30D36CF5250786580009ACCE /* UI */,
+				30D36CEB250779B60009ACCE /* UserListModule */,
+				30D36CEC25077F950009ACCE /* PostTestModule */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -283,6 +339,7 @@
 			children = (
 				30D36CEE250781540009ACCE /* UserListViewModelProtocol.swift */,
 				30D36CE5250778E60009ACCE /* UserListViewModel.swift */,
+				3029253725136C74002D07EB /* UserPostsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,8 +347,8 @@
 		30D36CF0250781DB0009ACCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				30D36CBA250761570009ACCE /* UserListController.swift */,
-				30D36CC5250763B90009ACCE /* View */,
+				3029252D25135F79002D07EB /* UserList */,
+				3029252E25135F8D002D07EB /* User'sPosts */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -364,8 +421,8 @@
 		30D36D032508CC060009ACCE /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				30D36D042508CC150009ACCE /* Coordinator.swift */,
 				30D36CB725075AFA0009ACCE /* CoordinatorProtocol.swift */,
+				30D36D042508CC150009ACCE /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -559,16 +616,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30D36CD8250777950009ACCE /* ViewData.swift in Sources */,
 				30D36CEF250781540009ACCE /* UserListViewModelProtocol.swift in Sources */,
 				E7A0E6F7250BDFD4006AA234 /* CheckInternetVC.swift in Sources */,
+				3029253025135FBE002D07EB /* UserPostsController.swift in Sources */,
 				30D36CBE250761A60009ACCE /* BaseViewController.swift in Sources */,
 				30D36CD22507718C0009ACCE /* NSObject.swift in Sources */,
+				30292534251367C2002D07EB /* UserPostsView.swift in Sources */,
 				30D36CC7250763EE0009ACCE /* MainController.swift in Sources */,
 				30D36CB525062ED40009ACCE /* AppCoordinator.swift in Sources */,
 				30D36CBB250761570009ACCE /* UserListController.swift in Sources */,
 				30D36CDA2507779F0009ACCE /* User.swift in Sources */,
 				E7A0E6FB250BE024006AA234 /* CheckInternetViewModel.swift in Sources */,
+				3029253825136C74002D07EB /* UserPostsViewModel.swift in Sources */,
 				30D36CA0250629F40009ACCE /* AppDelegate.swift in Sources */,
 				30D36CCC25076DFB0009ACCE /* MainFlowCoordinator.swift in Sources */,
 				30D36CDC250777AB0009ACCE /* Address.swift in Sources */,
@@ -577,10 +636,10 @@
 				30D36CE6250778E60009ACCE /* UserListViewModel.swift in Sources */,
 				30D36CB825075AFA0009ACCE /* CoordinatorProtocol.swift in Sources */,
 				30D36CFD250788FA0009ACCE /* MainView.swift in Sources */,
-				30D36CF4250782560009ACCE /* UserListView+Extension.swift in Sources */,
 				30D36CE4250778D80009ACCE /* MainViewModel.swift in Sources */,
 				30D36CE8250778F30009ACCE /* PostTestViewModel.swift in Sources */,
 				E7A0E6F9250BDFE7006AA234 /* CheckInternetView.swift in Sources */,
+				3029252C25135EE9002D07EB /* PostModel.swift in Sources */,
 				30D36CC0250761CD0009ACCE /* NavigationController.swift in Sources */,
 				E7A0E6F0250BDF5D006AA234 /* CheckInternetFlowCoordinator.swift in Sources */,
 				30D36D052508CC150009ACCE /* Coordinator.swift in Sources */,
@@ -593,6 +652,7 @@
 				30D36CE2250777C50009ACCE /* Post.swift in Sources */,
 				30D36CD52507734F0009ACCE /* R.generated.swift in Sources */,
 				30D36CDE250777B50009ACCE /* Geo.swift in Sources */,
+				30292536251367F0002D07EB /* UserPostsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

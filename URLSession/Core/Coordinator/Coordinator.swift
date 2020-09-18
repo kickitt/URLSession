@@ -9,7 +9,7 @@
 import UIKit
 
 class Coordinator: CoordinatorProtocol {
-    
+
     var window: UIWindow
     
     private var childrenCoordinators: [Coordinator] = []

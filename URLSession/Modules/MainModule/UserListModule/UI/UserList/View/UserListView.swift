@@ -11,6 +11,7 @@ import UIKit
 class UserListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     let tableView = UITableView()
+    let tableViewCellPressed: ((IndexPath) -> ())?
     
     var dataSource: [User] = [] {
         didSet {
@@ -54,7 +55,21 @@ class UserListView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        tableViewCellPressed?(indexPath)
+        
     }
-    
+/*
+     //MARK: -  UITableViewDelegate
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
+         tableView.deselectRow(at: indexPath, animated: true)
+         
+         let model = dataSource[indexPath.row]
+         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "UserInfoController") as? UserInfoController {
+             controller.model = model
+             self.navigationController?.pushViewController(controller, animated: true)
+         }
+     }
+     */
     
 }

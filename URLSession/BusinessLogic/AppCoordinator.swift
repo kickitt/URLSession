@@ -28,7 +28,7 @@ class AppCoordinator: Coordinator {
     private func startMainFlow() {
         let mainFlowCoordinator = MainFlowCoordinator(window: window)
         mainFlowCoordinator.onSuccessFlow = { [weak self] coordinator in
-            self?.removeChildrenCoordinator(coordinator: mainFlowCoordinator)
+            self?.removeChildrenCoordinator(coordinator: coordinator)
             self?.startFlow()
         }
         self.addChildrenCoordinator(coordinator: mainFlowCoordinator)
